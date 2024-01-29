@@ -3,7 +3,7 @@ import sinon from 'sinon';
 import sinonChai from 'sinon-chai';
 import { Request, Response } from 'express';
 import orderController from '../../../src/controllers/order.controller'
-import ordersMock from '../../mocks/orders.mock';
+import ordersMock from '../../mocks/order.mock';
 
 chai.use(sinonChai);
 

@@ -19,7 +19,6 @@ const userLogin = async (login: LoginReqBody): Promise<ServiceResponse<Token>> =
 
   const bcryptComparing = await bcrypt.compare(login.password, user.dataValues.password);
 
-  // com o compare assincrono a requisição funciona corretamente, porém devo ajustar os testes
   if (!bcryptComparing) {
     return { status: 401, data: { message: 'Username or password invalid' } };
   }

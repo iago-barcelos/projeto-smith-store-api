@@ -11,6 +11,16 @@ const OrdersFromModel = [
   })
 ];
 
+const orderRequestMock = {
+  productIds: [1, 2],
+  userId: 1
+}
+
+const orderResponseMock = {
+  userId: 1,
+  productIds: [1, 2]
+}
+
 const OrdersFromService: Order[] = [
   {
     id: 1,
@@ -28,4 +38,6 @@ const OrdersFromService: Order[] = [
 export default {
   OrdersFromModel,
   OrdersFromService,
+  orderRequestMock,
+  orderResponseMock,
 }

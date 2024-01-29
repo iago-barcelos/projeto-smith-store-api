@@ -9,7 +9,8 @@ const sign = (payload: Payload): string => {
 };
 
 const verify = (token: string): Payload => {
-  const data = jwt.verify(token, secret) as Payload;
+  const [, tokenString] = token.split(' '); 
+  const data = jwt.verify(tokenString, secret) as Payload;
   return data;
 };
 
